@@ -1,0 +1,54 @@
+﻿
+
+.dot {
+    margin:0;
+    height: 60px;
+    width:60px;
+    background-color: yellow;
+    display:inline-block;
+    border-radius:50%;
+    box-shadow: 5px 5px grey;
+}
+
+p {
+    text-align:center;
+    float: center;
+}
+
+.buttonArea {
+    display: block;
+}
+
+.button{
+    width:60px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight:300;
+    color: red;
+    text-shadow:1px 1px black;
+}
+
+h1{
+    font-size:60px;
+    color: green;
+    text-shadow:2px 2px grey;
+    text-align: center;
+}
+
+.all {
+   position: relative;
+   left:calc(50% - 360px/2);
+}
+
+.reset {
+    width:30p;
+    height:30px;
+}
+
+#reset {
+    position: relative;
+    left: calc(50% - 30px/2);
+}

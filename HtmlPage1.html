@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="main.css" >
+    <title></title>
+</head>
+<body>
+
+    <h1>LOTTO SIMULATOR</h1>
+    <div class="all">
+        <div class="dotArea">
+            <span class="dot"><p id="num1"></p></span>
+            <span class="dot"><p id="num2"></p></span>
+            <span class="dot"><p id="num3"></p></span>
+            <span class="dot"><p id="num4"></p></span>
+            <span class="dot"><p id="num5"></p></span>
+            <span class="dot"><p id="num6"></p></span>
+        </div>
+
+        <br />
+
+        <div class="buttonArea">
+            <button id="button1" class="button" onclick="document.getElementById('num1').innerHTML = luckynums(); this.disabled = true">Take First Number</button>
+            <button id="button2" class="button" onclick="document.getElementById('num2').innerHTML = luckynums(); this.disabled = true">Take Second Number</button>
+            <button id="button3" class="button" onclick="document.getElementById('num3').innerHTML = luckynums(); this.disabled = true">Take Third Number</button>
+            <button id="button4" class="button" onclick="document.getElementById('num4').innerHTML = luckynums(); this.disabled = true">Take Fourth Number</button>
+            <button id="button5" class="button" onclick="document.getElementById('num5').innerHTML = luckynums(); this.disabled = true">Take Fifth Number</button>
+            <button id="button6" class="button" onclick="document.getElementById('num6').innerHTML = luckynums(); nums(); this.disabled = true">Take Sixth Number</button>
+        </div>
+
+    </div>
+    <script>
+
+
+        var num = [];
+        for (l = 1; l < 50; l++) {
+            num.unshift(50 - l);
+        }
+
+        function luckynums() {
+            var luck = num[Math.floor(Math.random() * num.length)];
+            return luck;
+        }
+
+        function back() {
+            
+        }
+
+        function nums() {
+            document.getElementById("last").innerHTML = "<u>Lucky Numbers Are</u><br><br>" + document.getElementById("num1").innerHTML + " - " + document.getElementById("num2").innerHTML + " - " + document.getElementById("num3").innerHTML + " - " + document.getElementById("num4").innerHTML + " - " + document.getElementById("num5").innerHTML + " - " + document.getElementById("num6").innerHTML + "<br><br";
+            
+        }
+
+        
+    </script>
+    <h2 id="last"></h2>
+</body>
+</html>
